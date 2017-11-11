@@ -14,7 +14,8 @@ BASE_URL = 'https://' + BASE_HOST
 
 PROXY_URL = BASE_URL + '/proxy/page'
 UUID = 'dead3540-701e-452f-b2d9-629c652f7038'
-GENRES_URL = PROXY_URL + '/contenus?uuid=' + UUID
+APPID = '5955fc5f23eec60006c951f1'
+GENRES_URL = PROXY_URL + '/contenus?appId=' + APPID + '&uuid=' + UUID
 
 VIDEOS_URL = 'https://edge.api.brightcove.com/playback/v1/accounts/5481942443001/videos/'
 
@@ -58,7 +59,7 @@ def get_genres( shows_data, shows_by_id ):
 
 
 def get_show_sections( show ):
-    url = PROXY_URL + '/' + show['pageAlias'] + '?uuid=' + UUID
+    url = PROXY_URL + '/' + show['pageAlias'] + '?appId=' + APPID + '&uuid=' + UUID
     data = get_json_data(url)
 
     videos_list = {}
