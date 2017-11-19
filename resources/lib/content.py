@@ -103,10 +103,14 @@ def get_video_url( video_id ):
                          ('Referer', 'https://videos.tva.ca/')]
     response = opener.open(VIDEOS_URL + video_id)
     data = simplejson.load(response)
+
+    bitrate = 0
     for source in data['sources']:
-        if source['ext_x_version'] == "5":
-            url = source['src']
-            break
+        if 'avg_bitrate' in source:
+            if source['avg_bitrate'] > bitrate:
+                bitrate = source['avg_bitrate']
+                url = source['src']
+
     return url
 
 
