@@ -94,8 +94,7 @@ def get_show_sections( show ):
 
 
 def get_video_url( video_id ):
-    xbmc.log(VIDEOS_URL);
-    xbmc.log(video_id);
+    #TODO text tracks
     xbmc.log(VIDEOS_URL + video_id);
 
     opener = urllib2.build_opener()
