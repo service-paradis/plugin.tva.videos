@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.tva.videos" name="TVA" version="0.0.1" provider-name="Alexandre Paradis">
     <requires>
-        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.routing" version="0.2.0"/>
         <import addon="script.module.simplejson" version="2.0.10"/>
         <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -17,8 +17,8 @@
         <website>https://github.com/service-paradis</website>
         <email>service.paradis@gmail.com</email>
         <assets>
-            <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
 </addon>
